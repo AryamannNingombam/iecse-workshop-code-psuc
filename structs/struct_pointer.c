@@ -7,17 +7,12 @@
 typedef struct Person{
     char name[20];
     int age;
-    struct Person parent;
-}ppppp;
+}person;
 
-
-void test(struct Person *s){
-    s->age += 3;
-
+ void test(person *p){
+    p->age = 10;
+    printf("%s\n", p->name);
 }
-
-
-
 
 
 int main(){
@@ -29,8 +24,14 @@ int main(){
     p2->age = 21;
     p1.age = 23;
     strcpy(p2->name,"james");
-    strcpy((*p2).name,"james");
-    strcpy((*(*p3)).name,"james");
-    strcpy((*p3)->name,"james");
+    test(&p1);
+    strcpy((*p2).name,"frank");
+    test(p2);
+    strcpy((*(*p3)).name,"aryamann");
+    test(*p3);
+    strcpy((*p3)->name,"god");
+    test(*p3);
+    
+    
     return 0;
 }
