@@ -8,13 +8,15 @@ int main(){
     printf("b = %d\n", *b);
     //printing address of a and b;
     printf("Address of a : %p\n", &a);
-    printf("Address of b : %p\n", b);
-
+    printf("Value of b : %p\n", b);
+    printf("Address of b : %p\n",&b);
     //changing value of b;
     *b = 5;
     printf("a = %d\n", a);
     printf("b = %d\n", *b);
-
+ printf("Address of a : %p\n", &a);
+    printf("Value of b : %p\n", b);
+    printf("Address of b : %p\n",&b);
 
     return 0;
 }

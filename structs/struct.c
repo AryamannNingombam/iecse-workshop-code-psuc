@@ -1,17 +1,23 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef struct{
-    char name[100];
-    int age;
-    char shirt_size[100];
-}Boy;
 
 struct Girl{
     char name[100];
     int age;
     char pant_size[100];
 };
+
+typedef struct{
+    char name[100];
+    int age;
+    char shirt_size[100];
+}Boy;
+
+
+void print_boy(Boy b){
+    printf("dfd");
+}
 
 void print_girl_info(struct Girl g){
     printf("Name : %s\nAge : %d\nPant Size : %s\n",
@@ -21,6 +27,8 @@ void print_girl_info(struct Girl g){
 int main(){ 
     Boy b1;
     b1.age=19;
+    char arr[100] = "Aryamann";
+
     strcpy(b1.name,"Aryamann");
     strcpy(b1.shirt_size,"XL");
     struct Girl g1;
